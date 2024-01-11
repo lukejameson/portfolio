@@ -1,0 +1,16 @@
+{
+  "name": "simple-web-server",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "http-server",
+    "build-css": "postcss src/styles/main.css -o dist/styles/main.css"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "cssnano": "^6.0.3",
+    "http-server": "^0.12.3",
+    "postcss": "^8.4.33",
+    "tailwindcss": "^3.4.1",
+    "postcss-cli": "^9.0.1"
+  }
+}
