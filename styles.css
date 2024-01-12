@@ -1,0 +1,127 @@
+img.logo {
+  width: 48px;
+  height: 48px;
+}
+
+.socials {
+  cursor: pointer;
+}
+
+img.socials:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-height: 80px;
+  overflow: hidden;
+  transition: max-height 0.6s ease-in-out;
+  gap: 12px;
+  -webkit-transition: max-height 0.6s ease-in-out;
+  -moz-transition: max-height 0.6s ease-in-out;
+  -ms-transition: max-height 0.6s ease-in-out;
+  -o-transition: max-height 0.6s ease-in-out;
+}
+
+.grid-container.four-by-four {
+  max-height: 800px;
+  transition: max-height 0.6s ease-in-out;
+  -webkit-transition: max-height 0.6s ease-in-out;
+  -moz-transition: max-height 0.6s ease-in-out;
+  -ms-transition: max-height 0.6s ease-in-out;
+  -o-transition: max-height 0.6s ease-in-out;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-container {
+  cursor: pointer;
+  overflow: hidden;
+  max-height: 120px;
+  transition: max-height 1s ease-in-out;
+  -webkit-transition: max-height 1s ease-in-out;
+  -moz-transition: max-height 1s ease-in-out;
+  -ms-transition: max-height 1s ease-in-out;
+  -o-transition: max-height 1s ease-in-out;
+}
+
+.card-container:hover {
+  transform: scale(1.01);
+  transition: all 0.5s ease;
+  -webkit-transform: scale(1.01);
+  -moz-transform: scale(1.01);
+  -ms-transform: scale(1.01);
+  -o-transform: scale(1.01);
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+.expanded-content {
+  opacity: 0;
+  max-height: 0;
+  transition: max-height 1s ease-in-out, opacity 0.3s ease-in-out;
+  -webkit-transition: max-height 1s ease-in-out, opacity 0.3s ease-in-out;
+  -moz-transition: max-height 1s ease-in-out, opacity 0.3s ease-in-out;
+  -ms-transition: max-height 1s ease-in-out, opacity 0.3s ease-in-out;
+  -o-transition: max-height 1s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.card-container.expanded {
+  max-height: 1000px;
+}
+
+.card-container.expanded .expanded-content {
+  opacity: 1;
+  max-height: 1000px;
+}
+
+.ellipsis {
+  display: flex;
+  justify-content: space-around;
+  width: 50px;
+  height: 48px;
+}
+
+.ball {
+  width: 10px;
+  height: 10px;
+  margin-top: 22px;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.ellipsis:hover .ball {
+  animation: bounce 1.2s ease infinite;
+  -webkit-animation: bounce 1.2s ease infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.ellipsis .ball:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.ellipsis .ball:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.ellipsis .ball:nth-child(3) {
+  animation-delay: 0.4s;
+}

@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="styles.css" />
     <title>Luke Jameson</title>
   </head>
   <body>
@@ -14,92 +16,104 @@
           Full Stack Developer
         </h2>
       </header>
-      <section
-        class="flex flex-col items-center justify-center space-y-4 mt-5"
-      >
+      <section class="flex flex-col items-center justify-center space-y-4 mt-5">
         <h3 class="text-2xl font-bold">Skills</h3>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div class="flex flex-col items-center justify-center space-y-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 50 50"
-              width="48px"
-              height="48px"
-            >
-              <path
-                d="M 25 2 C 24.285156 2 23.570313 2.179688 22.933594 2.539063 L 6.089844 12.003906 C 4.800781 12.726563 4 14.082031 4 15.535156 L 4 34.464844 C 4 35.917969 4.800781 37.273438 6.089844 37.996094 L 22.933594 47.460938 C 23.570313 47.820313 24.285156 48 25 48 C 25.714844 48 26.429688 47.820313 27.066406 47.460938 L 43.910156 38 C 45.199219 37.273438 46 35.917969 46 34.464844 L 46 15.535156 C 46 14.082031 45.199219 12.726563 43.910156 12.003906 L 27.066406 2.539063 C 26.429688 2.179688 25.714844 2 25 2 Z M 25 13 C 28.78125 13 32.277344 14.753906 34.542969 17.738281 L 30.160156 20.277344 C 28.84375 18.835938 26.972656 18 25 18 C 21.140625 18 18 21.140625 18 25 C 18 28.859375 21.140625 32 25 32 C 26.972656 32 28.84375 31.164063 30.160156 29.722656 L 34.542969 32.261719 C 32.277344 35.246094 28.78125 37 25 37 C 18.382813 37 13 31.617188 13 25 C 13 18.382813 18.382813 13 25 13 Z M 35 20 L 37 20 L 37 22 L 39 22 L 39 20 L 41 20 L 41 22 L 43 22 L 43 24 L 41 24 L 41 26 L 43 26 L 43 28 L 41 28 L 41 30 L 39 30 L 39 28 L 37 28 L 37 30 L 35 30 L 35 28 L 33 28 L 33 26 L 35 26 L 35 24 L 33 24 L 33 22 L 35 22 Z M 37 24 L 37 26 L 39 26 L 39 24 Z"
-              /></svg
-            ><span>C#</span>
+        <div id="gridContainer" class="grid-container">
+          <div class="grid-item">
+            <img src="images/csharp.svg" class="logo" alt="C# SVG" />
+            <span>C#</span>
           </div>
-          <div class="flex flex-col items-center justify-center space-y-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="48"
-              width="48"
-              viewBox="0 0 448 512"
-            >
-              <path
-                d="M185.7 268.1h76.2l-38.1-91.6-38.1 91.6zM223.8 32L16 106.4l31.8 275.7 176 97.9 176-97.9 31.8-275.7zM354 373.8h-48.6l-26.2-65.4H168.6l-26.2 65.4H93.7L223.8 81.5z"
-              /></svg
-            ><span>Angular</span>
+          <div class="grid-item">
+            <img src="images/angular.svg" class="logo" alt="Angular SVG" />
+            <span>Angular</span>
           </div>
-          <div class="flex flex-col items-center justify-center space-y-2">
-            <svg
-              id="svelte"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 128 128"
-              width="48"
-              height="48"
-            >
-              <defs>
-                <style>
-                  .cls-1 {
-                    fill: #8d8d93;
-                  }
-                  .cls-2 {
-                    fill: #4a4a55;
-                  }
-                  .cls-3 {
-                    fill: #000;
-                  }
-                  .cls-4 {
-                    fill: #fff;
-                  }
-                </style>
-              </defs>
-
-              <path
-                id="orange"
-                class="cls-3"
-                d="M110.286,28.319c-10.4-14.885-30.941-19.3-45.792-9.835L38.412,35.108A29.921,29.921,0,0,0,24.893,55.151,31.514,31.514,0,0,0,28,75.382a29.987,29.987,0,0,0-4.476,11.183,31.888,31.888,0,0,0,5.447,24.116c10.4,14.887,30.942,19.3,45.791,9.835l26.083-16.624a29.92,29.92,0,0,0,13.519-20.043,31.529,31.529,0,0,0-3.106-20.232,30,30,0,0,0,4.474-11.182,31.878,31.878,0,0,0-5.447-24.116"
-              />
-              <path
-                id="white"
-                class="cls-4"
-                d="M61.946,112.082a20.72,20.72,0,0,1-22.237-8.243,19.176,19.176,0,0,1-3.276-14.5,18.143,18.143,0,0,1,.623-2.435l.491-1.5,1.337.981a33.633,33.633,0,0,0,10.2,5.1l.969.294-.089.968a5.844,5.844,0,0,0,1.052,3.878,6.24,6.24,0,0,0,6.7,2.485,5.748,5.748,0,0,0,1.6-.7L85.4,81.781A5.43,5.43,0,0,0,87.85,78.15a5.794,5.794,0,0,0-.988-4.371,6.244,6.244,0,0,0-6.7-2.487,5.737,5.737,0,0,0-1.6.7l-9.954,6.345a19.047,19.047,0,0,1-5.3,2.326,20.72,20.72,0,0,1-22.237-8.243,19.171,19.171,0,0,1-3.277-14.5A17.992,17.992,0,0,1,45.932,45.87L72.013,29.247a19.011,19.011,0,0,1,5.3-2.329,20.719,20.719,0,0,1,22.237,8.243,19.176,19.176,0,0,1,3.277,14.5A18.453,18.453,0,0,1,102.2,52.1l-.491,1.5-1.336-.979a33.616,33.616,0,0,0-10.2-5.1l-.97-.294.09-.968a5.859,5.859,0,0,0-1.052-3.878,6.24,6.24,0,0,0-6.695-2.485,5.742,5.742,0,0,0-1.6.7L53.859,57.219a5.425,5.425,0,0,0-2.449,3.63,5.79,5.79,0,0,0,.986,4.372,6.245,6.245,0,0,0,6.7,2.487,5.773,5.773,0,0,0,1.6-.7l9.952-6.342a18.978,18.978,0,0,1,5.3-2.328A20.718,20.718,0,0,1,98.18,66.576a19.171,19.171,0,0,1,3.277,14.5,18,18,0,0,1-8.13,12.054L67.246,109.753a19,19,0,0,1-5.3,2.329"
-              />
-            </svg>
-
-            <span>SvelteKit</span>
-          </div>
-          <div class="flex flex-col items-center justify-center space-y-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="48"
-              width="48"
-              viewBox="0 0 448 512"
-            >
-              <path
-                d="M0 32v448h448V32H0zm243.8 349.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z"
-              />
-            </svg>
+          <div class="grid-item">
+            <img src="images/javascript.svg" class="logo" alt="JS SVG" />
             <span>JS/TS</span>
+          </div>
+          <div class="grid-item more-button">
+            <div class="ellipsis">
+              <div class="ball"></div>
+              <div class="ball"></div>
+              <div class="ball"></div>
+            </div>
+            <span class="more-button-text">More</span>
+          </div>
+          <div class="grid-item">
+            <img src="images/html5.svg" class="logo" alt="C# SVG" />
+            <span>HTML</span>
+          </div>
+          <div class="grid-item">
+            <img src="images/css3-alt.svg" class="logo" alt="C# SVG" />
+            <span>SCSS</span>
+          </div>
+          <div class="grid-item">
+            <img src="images/bootstrap.svg" class="logo" alt="C# SVG" />
+            <span>Bootstrap</span>
+          </div>
+          <div class="grid-item">
+            <img src="images/tailwindcss.svg" class="logo" alt="C# SVG" />
+            <span>Tailwinds</span>
+          </div>
+          <div class="grid-item">
+            <img src="images/redis.svg" class="logo" alt="C# SVG" />
+            <span>Redis</span>
+          </div>
+          <div class="grid-item">
+            <img src="images/database-solid.svg" class="logo" alt="C# SVG" />
+            <span>SQL</span>
+          </div>
+          <div class="grid-item">
+            <img src="images/rabbitmq.svg" class="logo" alt="C# SVG" />
+            <span>RabbitMQ</span>
+          </div>
+          <div class="grid-item">
+            <img src="images/docker.svg" class="logo" alt="C# SVG" />
+            <span>Docker</span>
+          </div>
+          <div class="grid-item">
+            <img src="images/kubernetes.svg" class="logo" alt="C# SVG" />
+            <span>Kubernetes</span>
+          </div>
+          <div class="grid-item">
+            <img src="images/node.svg" class="logo" alt="C# SVG" />
+            <span>Node</span>
           </div>
         </div>
       </section>
-      <section
-        class="flex flex-col items-center justify-center space-y-4 mt-5"
-      >
+      <section class="flex flex-col items-center justify-center space-y-4 mt-5">
+        <h3 class="text-2xl font-bold">Socials</h3>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <a href="https://github.com/lukejameson" target="_blank">
+            <div class="flex flex-col items-center justify-center space-y-2">
+              <img
+                src="images/github.svg"
+                class="logo socials"
+                alt="Github logo" />
+              <span>GitHub</span>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/luke-jameson/" target="_blank">
+            <div class="flex flex-col items-center justify-center space-y-2">
+              <img
+                src="images/linkedin.svg"
+                class="logo socials"
+                alt="LinkedIn logo" />
+              <span>LinkedIn</span>
+            </div>
+          </a>
+          <a href="https://www.instagram.com/lukej_ameson/" target="_blank">
+            <div class="flex flex-col items-center justify-center space-y-2">
+              <img
+                src="images/instagram.svg"
+                class="logo socials"
+                alt="Instagram logo" />
+              <span>Instagram</span>
+            </div>
+          </a>
+        </div>
+      </section>
+      <!-- <section class="flex flex-col items-center justify-center space-y-4 mt-5">
         <h3 class="text-2xl font-bold">Projects</h3>
         <div class="grid sm:grid-cols-2 gap-4 w-full max-w-2xl mx-auto">
           <img
@@ -128,17 +142,57 @@
             class="aspect-square object-cover border border-gray-200 w-full rounded-lg overflow-hidden dark:border-gray-800"
           />
         </div>
-      </section>
-      <section
-        class="flex flex-col items-center justify-center space-y-4 mt-5"
-      >
+      </section> -->
+      <section class="flex flex-col items-center justify-center space-y-4 mt-5">
         <h3 class="text-2xl font-bold">Experience &amp; Education</h3>
         <div class="flex flex-col space-y-2 w-full max-w-2xl">
-          <div
-            class="rounded-lg border bg-card text-card-foreground shadow-sm"
-            data-v0-t="card"
->
-            <div class="space-y-1.5 p-6 flex flex-row items-center gap-4">
+          <div class="card-container">
+            <div
+              class="rounded-lg border bg-card text-card-foreground shadow-sm"
+              data-v0-t="card">
+              <div class="space-y-1.5 p-6 flex flex-row items-center gap-4">
+                <img src="/images/suitcase.svg" alt="Suitcase icon" />
+                <div class="grid gap-1">
+                  <h3
+                    class="text-2xl font-semibold leading-none tracking-tight">
+                    Full Stack Developer
+                  </h3>
+                  <p class="text-sm text-muted-foreground">
+                    GTL, 2020 - Present
+                  </p>
+                </div>
+              </div>
+              <div
+                class="expanded-content flex flex-col gap-y-3 hidden pt-1 pl-6 pr-6 pb-6">
+                <div class="flex flex-col gap-y-1">
+                  <h5 class="text-md font-semibold leading-none tracking-tight">
+                    Projects:
+                  </h5>
+                  <ul class="list-disc list-inside pl-2">
+                    <li>Trading Platform Web Apps</li>
+                    <li>Internal Tooling Web Apps</li>
+                    <li>Platform diagnostics app</li>
+                  </ul>
+                </div>
+                <div class="flex flex-col gap-y-1">
+                  <h5 class="text-md font-semibold leading-none tracking-tight">
+                    Tech Used:
+                  </h5>
+                  <ul class="list-disc list-inside pl-2">
+                    <li>Angular, Typescript, CSS/SCSS</li>
+                    <li>C#, ASP.NET, Redis, SQL</li>
+                    <li>RabbitMQ, MassTransit</li>
+                    <li>HTML, Bootstrap, Node</li>
+                    <li>Docker, Kubernetes, Rancher</li>
+                    <li>Jira, Bitbucket, Confluence</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="rounded-lg border bg-card text-card-foreground shadow-sm experience-card" data-v0-t="card">
+            <div class="space-y-1.5 p-6 flex flex-row items-center gap-4 ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -161,27 +215,12 @@
                 <p class="text-sm text-muted-foreground">GTL, 2020 - Present</p>
               </div>
             </div>
-          </div>
+          </div> -->
           <div
-            class="rounded-lg border bg-card text-card-foreground shadow-sm"
-            data-v0-t="card"
-          >
+            class="rounded-lg border bg-card text-card-foreground shadow-sm experience-card"
+            data-v0-t="card">
             <div class="space-y-1.5 p-6 flex flex-row items-center gap-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="w-8 h-8"
-              >
-                <rect width="20" height="14" x="2" y="7" rx="2" ry="2"></rect>
-                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-              </svg>
+              <img src="/images/suitcase.svg" alt="Suitcase icon" />
               <div class="grid gap-1">
                 <h3 class="text-2xl font-semibold leading-none tracking-tight">
                   Business Intelligence
@@ -191,9 +230,8 @@
             </div>
           </div>
           <div
-            class="rounded-lg border bg-card text-card-foreground shadow-sm"
-            data-v0-t="card"
-          >
+            class="rounded-lg border bg-card text-card-foreground shadow-sm experience-card"
+            data-v0-t="card">
             <div class="space-y-1.5 p-6 flex flex-row items-center gap-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -205,8 +243,7 @@
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                class="w-8 h-8"
-              >
+                class="w-8 h-8">
                 <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
                 <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
               </svg>
@@ -222,9 +259,7 @@
           </div>
         </div>
       </section>
-      <section
-        class="flex flex-col items-center justify-center space-y-4 mt-5"
-      >
+      <!-- <section class="flex flex-col items-center justify-center space-y-4 mt-5">
         <h3 class="text-2xl font-bold">Contact</h3>
         <div class="flex flex-col space-y-2 w-full max-w-2xl">
           <input
@@ -242,7 +277,7 @@
             Submit
           </button>
         </div>
-      </section>
+      </section> -->
     </main>
   </body>
 </html>
