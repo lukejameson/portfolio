@@ -25,18 +25,26 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  document
-    .querySelector(".ellipsis")
-    .addEventListener("mouseenter", function () {
-      this.classList.add("hover");
-    });
+  function addHoverClass() {
+    ellipsisElement.classList.add("hover");
+  }
 
-  document
-    .querySelector(".ellipsis")
-    .addEventListener("mouseleave", function () {
-      const ellipsis = this;
-      setTimeout(function () {
-        ellipsis.classList.remove("hover");
-      }, 600); // The duration should match the longest animation (including delay)
-    });
+  function removeHoverClass() {
+    setTimeout(function () {
+      ellipsisElement.classList.remove("hover");
+    }, 600);
+  }
+
+ellipsisElement.addEventListener("mouseenter", addHoverClass);
+ellipsisElement.addEventListener("mouseleave", removeHoverClass);
+
+ellipsisElement.addEventListener("touchstart", function (e) {
+  e.preventDefault();
+  addHoverClass();
+});
+
+ellipsisElement.addEventListener("touchend", function (e) {
+  e.preventDefault();
+  removeHoverClass();
+});
 });
