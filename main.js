@@ -1,29 +1,34 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const cardContainer = document.querySelector(".card-container");
-  const expandedContent = cardContainer.querySelector(".expanded-content");
+  const cardContainers = document.querySelectorAll(".card-container");
+  const moreButton = document.querySelector(".more-button");
+  const ellipsisElement = document.querySelector(".ellipsis");
 
-  document.querySelector(".more-button").addEventListener("click", function () {
-    if (document.querySelector(".more-button-text").textContent == "More") {
-      document.querySelector(".more-button-text").textContent = "Less";
-    } else {
-      document.querySelector(".more-button-text").textContent = "More";
-    }
+  moreButton.addEventListener("click", function () {
+    const moreButtonText = this.querySelector(".more-button-text");
+    moreButtonText.textContent = moreButtonText.textContent === "More" ? "Less" : "More";
 
-    var gridContainer = document.getElementById("gridContainer");
+    const gridContainer = document.getElementById("gridContainer");
     gridContainer.classList.toggle("four-by-four");
   });
 
-  if (cardContainer) {
-    cardContainer.addEventListener("click", function () {
-      if (expandedContent.classList.contains("hidden")) {
-        expandedContent.classList.remove("hidden");
-        cardContainer.classList.add("expanded");
+  cardContainers.forEach((cardContainer) => {
+    const expandedContent = cardContainer.querySelector(".expanded-content");
+    const cardHeader = cardContainer.querySelector(".card-header");
+
+    cardHeader.addEventListener("click", function () {
+      cardContainer.classList.toggle("expanded");
+
+      if (cardContainer.classList.contains("expanded")) {
+        expandedContent.style.maxHeight = expandedContent.scrollHeight + 16 + "px"; // Add 16px for padding
+        expandedContent.style.opacity = "1";
+        // expandedContent.style.paddingBottom = "16px";
       } else {
-        expandedContent.classList.add("hidden");
-        cardContainer.classList.remove("expanded");
+        expandedContent.style.maxHeight = "0px";
+        expandedContent.style.opacity = "0";
+        expandedContent.style.paddingBottom = "0px";
       }
     });
-  }
+  });
 
   function addHoverClass() {
     ellipsisElement.classList.add("hover");
@@ -35,16 +40,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 600);
   }
 
-ellipsisElement.addEventListener("mouseenter", addHoverClass);
-ellipsisElement.addEventListener("mouseleave", removeHoverClass);
+  ellipsisElement.addEventListener("mouseenter", addHoverClass);
+  ellipsisElement.addEventListener("mouseleave", removeHoverClass);
 
-ellipsisElement.addEventListener("touchstart", function (e) {
-  e.preventDefault();
-  addHoverClass();
-});
+  ellipsisElement.addEventListener("touchstart", function (e) {
+    e.preventDefault();
+    addHoverClass();
+  });
 
-ellipsisElement.addEventListener("touchend", function (e) {
-  e.preventDefault();
-  removeHoverClass();
-});
+  ellipsisElement.addEventListener("touchend", function (e) {
+    e.preventDefault();
+    removeHoverClass();
+  });
 });

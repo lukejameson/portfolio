@@ -6,17 +6,16 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="main.js"></script>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" type="image/png" href="/images/portfolio.png">
+    <link rel="icon" type="image/png" href="/images/portfolio.png" />
     <title>Luke Jameson</title>
   </head>
-  <body>
+  <body class="overflow-y-auto">
     <main class="flex flex-col items-center justify-center min-h-screen py-2">
       <header class="flex flex-col items-center justify-center space-y-2">
         <h1 class="text-4xl font-bold">Luke Jameson</h1>
-        <h2 class="text-xl text-gray-500 dark:text-gray-400">
-          Full Stack Developer
-        </h2>
+        <h2 class="text-xl text-gray-500 dark:text-gray-400">Full Stack Developer</h2>
       </header>
+
       <section class="flex flex-col items-center justify-center space-y-4 mt-5">
         <h3 class="text-2xl font-bold">Skills</h3>
         <div id="gridContainer" class="grid-container">
@@ -80,6 +79,10 @@
             <img src="images/node.svg" class="logo" alt="C# SVG" />
             <span>Node</span>
           </div>
+          <div class="grid-item">
+            <img src="images/python.svg" class="logo" alt="C# SVG" />
+            <span>Python</span>
+          </div>
         </div>
       </section>
       <section class="flex flex-col items-center justify-center space-y-4 mt-5">
@@ -87,106 +90,59 @@
         <div class="socials-grid-container">
           <a href="https://github.com/lukejameson" target="_blank">
             <div class="grid-item">
-              <img
-                src="images/github.svg"
-                class="logo socials"
-                alt="Github logo" />
+              <img src="images/github.svg" class="logo socials" alt="Github logo" />
               <span>GitHub</span>
             </div>
           </a>
           <a href="https://www.linkedin.com/in/luke-jameson/" target="_blank">
             <div class="grid-item">
-              <img
-                src="images/linkedin.svg"
-                class="logo socials"
-                alt="LinkedIn logo" />
+              <img src="images/linkedin.svg" class="logo socials" alt="LinkedIn logo" />
               <span>LinkedIn</span>
             </div>
           </a>
           <a href="https://www.instagram.com/lukej_ameson/" target="_blank">
             <div class="grid-item">
-              <img
-                src="images/instagram.svg"
-                class="logo socials"
-                alt="Instagram logo" />
+              <img src="images/instagram.svg" class="logo socials" alt="Instagram logo" />
               <span>Instagram</span>
             </div>
           </a>
         </div>
       </section>
-      <!-- <section class="flex flex-col items-center justify-center space-y-4 mt-5">
-        <h3 class="text-2xl font-bold">Projects</h3>
-        <div class="grid sm:grid-cols-2 gap-4 w-full max-w-2xl mx-auto">
-          <img
-            src="/placeholder.svg"
-            alt="Project Image"
-            width="600"
-            height="600"
-            class="aspect-square object-cover border border-gray-200 w-full rounded-lg overflow-hidden dark:border-gray-800"
-          /><img
-            src="/placeholder.svg"
-            alt="Project Image"
-            width="600"
-            height="600"
-            class="aspect-square object-cover border border-gray-200 w-full rounded-lg overflow-hidden dark:border-gray-800"
-          /><img
-            src="/placeholder.svg"
-            alt="Project Image"
-            width="600"
-            height="600"
-            class="aspect-square object-cover border border-gray-200 w-full rounded-lg overflow-hidden dark:border-gray-800"
-          /><img
-            src="/placeholder.svg"
-            alt="Project Image"
-            width="600"
-            height="600"
-            class="aspect-square object-cover border border-gray-200 w-full rounded-lg overflow-hidden dark:border-gray-800"
-          />
-        </div>
-      </section> -->
       <section class="flex flex-col items-center justify-center space-y-4 mt-5">
         <h3 class="text-2xl font-bold">Experience &amp; Education</h3>
         <div class="flex flex-col space-y-2 w-full max-w-2xl">
           <div class="card-container">
-            <div
-              class="rounded-lg border bg-card text-card-foreground shadow-sm"
-              data-v0-t="card">
+            <div class="card-header rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
               <div class="space-y-1.5 p-6 flex flex-row items-center gap-4">
                 <img src="/images/suitcase.svg" alt="Suitcase icon" />
                 <div class="grid gap-1">
-                  <div
-                    class="text-2xl font-semibold leading-none tracking-tight flex gap-3">
-                    <span>Developer</span>
+                  <div class="text-2xl font-semibold leading-none tracking-tight flex gap-3">
+                    <span>Developer / Data Engineer</span>
                     <img src="/images/caret-down-duotone.svg" />
                   </div>
-                  <p class="text-sm text-muted-foreground">
-                    GTL, 2020 - Present
-                  </p>
+                  <p class="text-sm text-muted-foreground">GTL, 2020 - Present</p>
                 </div>
               </div>
 
-              <div
-                class="expanded-content flex flex-col gap-y-3 hidden pt-1 pl-6 pr-6 pb-6">
+              <div class="expanded-content flex flex-col gap-y-3 pt-1 pl-6 pr-6">
                 <div class="flex flex-col gap-y-1">
-                  <h5 class="text-md font-semibold leading-none tracking-tight">
-                    Projects:
-                  </h5>
+                  <h5 class="text-md font-semibold leading-none tracking-tight">Projects:</h5>
                   <ul class="list-disc list-inside pl-2">
                     <li>Trading Platform Web Apps</li>
                     <li>Internal Tooling Web Apps</li>
-                    <li>Platform diagnostics app</li>
+                    <li>Platform Diagnostics app</li>
+                    <li>Data Pipelines and ELTs</li>
                   </ul>
                 </div>
                 <div class="flex flex-col gap-y-1">
-                  <h5 class="text-md font-semibold leading-none tracking-tight">
-                    Tech Used:
-                  </h5>
+                  <h5 class="text-md font-semibold leading-none tracking-tight">Tech Used:</h5>
                   <ul class="list-disc list-inside pl-2">
                     <li>Angular, Typescript, CSS/SCSS</li>
                     <li>C#, ASP.NET, Redis, SQL</li>
                     <li>RabbitMQ, MassTransit</li>
                     <li>HTML, Bootstrap, Node</li>
                     <li>Docker, Kubernetes, Rancher</li>
+                    <li>Python, PySpark, PyTest</li>
                     <li>Jira, Bitbucket, Confluence</li>
                   </ul>
                 </div>
@@ -219,22 +175,16 @@
               </div>
             </div>
           </div> -->
-          <div
-            class="rounded-lg border bg-card text-card-foreground shadow-sm experience-card"
-            data-v0-t="card">
+          <div class="rounded-lg border bg-card text-card-foreground shadow-sm experience-card" data-v0-t="card">
             <div class="space-y-1.5 p-6 flex flex-row items-center gap-4">
               <img src="/images/suitcase.svg" alt="Suitcase icon" />
               <div class="grid gap-1">
-                <h3 class="text-2xl font-semibold leading-none tracking-tight">
-                  Business Intelligence
-                </h3>
+                <h3 class="text-2xl font-semibold leading-none tracking-tight">Business Intelligence</h3>
                 <p class="text-sm text-muted-foreground">C5, 2017 - 2020</p>
               </div>
             </div>
           </div>
-          <div
-            class="rounded-lg border bg-card text-card-foreground shadow-sm experience-card"
-            data-v0-t="card">
+          <div class="rounded-lg border bg-card text-card-foreground shadow-sm experience-card" data-v0-t="card">
             <div class="space-y-1.5 p-6 flex flex-row items-center gap-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -251,12 +201,8 @@
                 <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
               </svg>
               <div class="grid gap-1">
-                <h3 class="text-2xl font-semibold leading-none tracking-tight">
-                  Computing - L3 BTEC
-                </h3>
-                <p class="text-sm text-muted-foreground">
-                  Highlands Collage, 2014 - 2017
-                </p>
+                <h3 class="text-2xl font-semibold leading-none tracking-tight">Computing - L3 BTEC</h3>
+                <p class="text-sm text-muted-foreground">Highlands Collage, 2014 - 2017</p>
               </div>
             </div>
           </div>
