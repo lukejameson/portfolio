@@ -20,7 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const moreButton = document.querySelector(".more-button");
   const ellipsisElement = document.querySelector(".ellipsis");
 
-  moreButton.addEventListener("click", function () {
+  moreButton.addEventListener("click", function (event) {
+    event.preventDefault();
     const moreButtonText = this.querySelector(".more-button-text");
     moreButtonText.textContent = moreButtonText.textContent === "More" ? "Less" : "More";
 
