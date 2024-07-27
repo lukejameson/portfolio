@@ -1,3 +1,36 @@
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --card-background: #f5f5f5;
+  --logo-color: #000000;
+  --card-outline-color: #000000;
+}
+
+body.dark-mode {
+  --background-color: #121212;
+  --text-color: #f1f1f1;
+  --card-background: #2a2a2a;
+  --logo-color: #f1f1f1;
+  --card-outline-color: #535353;
+}
+
+body.dark-mode {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+body.dark-mode,
+.logo body.dark-mode .card-container {
+  background-color: var(--card-background);
+}
+
+body.dark-mode .logo {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+body.dark-mode .ball {
+  background-color: var(--logo-color);
+}
+
 /* Scrollbar styles */
 ::-webkit-scrollbar {
   width: 4px;
@@ -24,30 +57,36 @@
 .logo {
   width: 48px;
   height: 48px;
+  filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+  transition: filter 0.3s ease;
+  -webkit-filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
 }
 
-.socials {
-  cursor: pointer;
+.logo.sm {
+  width: 32px;
+  height: 32px;
 }
 
-.socials:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s ease;
+.logo.dropdown {
+  width: 10px;
+  height: 16px;
 }
 
 /* Grid layouts */
-.socials-grid-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-}
-
 .grid-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   overflow: hidden;
   transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  -moz-transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  -ms-transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.border {
+  border-color: var(--card-outline-color);
 }
 
 .grid-container {
@@ -55,7 +94,7 @@
 }
 
 .grid-container.four-by-four {
-  max-height: 320px; /* Height for 4 rows (80px * 4) */
+  max-height: 360px; /* Height for 4 rows (80px * 4) */
 }
 
 .grid-item {
@@ -69,6 +108,10 @@
   cursor: pointer;
   overflow: hidden;
   transition: max-height 0.6s ease-in-out, transform 0.5s ease, padding-bottom 0.6s ease-in-out;
+  -webkit-transition: max-height 0.6s ease-in-out, transform 0.5s ease, padding-bottom 0.6s ease-in-out;
+  -moz-transition: max-height 0.6s ease-in-out, transform 0.5s ease, padding-bottom 0.6s ease-in-out;
+  -ms-transition: max-height 0.6s ease-in-out, transform 0.5s ease, padding-bottom 0.6s ease-in-out;
+  -o-transition: max-height 0.6s ease-in-out, transform 0.5s ease, padding-bottom 0.6s ease-in-out;
 }
 
 .card-container:hover {
@@ -101,7 +144,7 @@
   height: 10px;
   margin-top: 22px;
   border-radius: 50%;
-  background-color: black;
+  background-color: var(--logo-color);
 }
 
 .ellipsis:hover .ball {
@@ -126,4 +169,43 @@
 }
 .ellipsis .ball:nth-child(3) {
   animation-delay: 0.4s;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.theme-toggle svg {
+  width: 24px;
+  height: 24px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }

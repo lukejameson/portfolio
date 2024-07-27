@@ -10,6 +10,10 @@
     <title>Luke Jameson</title>
   </head>
   <body class="overflow-y-auto">
+    <button id="themeToggle" class="theme-toggle" data-tool>
+      <img src="images/sun.svg" class="logo" style="width: 24px; height: 24px" id="theme-icon" />
+    </button>
+
     <main class="flex flex-col items-center justify-center min-h-screen py-2">
       <header class="flex flex-col items-center justify-center space-y-2">
         <h1 class="text-4xl font-bold">Luke Jameson</h1>
@@ -53,7 +57,7 @@
           </div>
           <div class="grid-item">
             <img src="images/tailwindcss.svg" class="logo" alt="C# SVG" />
-            <span>Tailwinds</span>
+            <span>Tailwind</span>
           </div>
           <div class="grid-item">
             <img src="images/redis.svg" class="logo" alt="C# SVG" />
@@ -86,8 +90,8 @@
         </div>
       </section>
       <section class="flex flex-col items-center justify-center space-y-4 mt-5">
-        <h3 class="text-2xl font-bold">Socials</h3>
-        <div class="socials-grid-container">
+        <h3 class="text-2xl font-bold">Socials/Contact</h3>
+        <div class="grid-container">
           <a href="https://github.com/lukejameson" target="_blank">
             <div class="grid-item">
               <img src="images/github.svg" class="logo socials" alt="Github logo" />
@@ -106,6 +110,12 @@
               <span>Instagram</span>
             </div>
           </a>
+          <a href="mailto:lukejameson@live.co.uk" target="_blank">
+            <div class="grid-item">
+              <img src="images/envelope.svg" class="logo socials" alt="Instagram logo" />
+              <span>Email</span>
+            </div>
+          </a>
         </div>
       </section>
       <section class="flex flex-col items-center justify-center space-y-4 mt-5">
@@ -114,11 +124,11 @@
           <div class="card-container">
             <div class="card-header rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
               <div class="space-y-1.5 p-6 flex flex-row items-center gap-4">
-                <img src="/images/suitcase.svg" alt="Suitcase icon" />
+                <img src="/images/suitcase.svg" alt="Suitcase icon" class="logo sm" />
                 <div class="grid gap-1">
                   <div class="text-2xl font-semibold leading-none tracking-tight flex gap-3">
                     <span>Developer / Data Engineer</span>
-                    <img src="/images/caret-down-duotone.svg" />
+                    <img src="/images/caret-down-duotone.svg" class="logo dropdown" />
                   </div>
                   <p class="text-sm text-muted-foreground">GTL, 2020 - Present</p>
                 </div>
@@ -150,34 +160,9 @@
             </div>
           </div>
 
-          <!-- <div class="rounded-lg border bg-card text-card-foreground shadow-sm experience-card" data-v0-t="card">
-            <div class="space-y-1.5 p-6 flex flex-row items-center gap-4 ">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="w-8 h-8"
-              >
-                <rect width="20" height="14" x="2" y="7" rx="2" ry="2"></rect>
-                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-              </svg>
-              <div class="grid gap-1">
-                <h3 class="text-2xl font-semibold leading-none tracking-tight">
-                  Full Stack Developer
-                </h3>
-                <p class="text-sm text-muted-foreground">GTL, 2020 - Present</p>
-              </div>
-            </div>
-          </div> -->
           <div class="rounded-lg border bg-card text-card-foreground shadow-sm experience-card" data-v0-t="card">
             <div class="space-y-1.5 p-6 flex flex-row items-center gap-4">
-              <img src="/images/suitcase.svg" alt="Suitcase icon" />
+              <img src="/images/suitcase.svg" alt="Suitcase icon" class="logo sm" />
               <div class="grid gap-1">
                 <h3 class="text-2xl font-semibold leading-none tracking-tight">Business Intelligence</h3>
                 <p class="text-sm text-muted-foreground">C5, 2017 - 2020</p>

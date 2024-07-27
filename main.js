@@ -1,4 +1,21 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const themeToggle = document.getElementById("themeToggle");
+  const body = document.body;
+
+  // Check for saved theme preference or default to light mode
+  const currentTheme = localStorage.getItem("theme") || "light";
+  body.classList.toggle("dark-mode", currentTheme === "dark");
+
+  themeToggle.children[0].src = currentTheme == "light" ? "images/moon.svg" : "images/sun.svg";
+
+  themeToggle.addEventListener("click", function () {
+    themeToggle.children[0].src = body.classList.contains("dark-mode") ? "images/moon.svg" : "images/sun.svg";
+
+    body.classList.toggle("dark-mode");
+    const theme = body.classList.contains("dark-mode") ? "dark" : "light";
+    localStorage.setItem("theme", theme);
+  });
+
   const cardContainers = document.querySelectorAll(".card-container");
   const moreButton = document.querySelector(".more-button");
   const ellipsisElement = document.querySelector(".ellipsis");
@@ -21,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (cardContainer.classList.contains("expanded")) {
         expandedContent.style.maxHeight = expandedContent.scrollHeight + 16 + "px"; // Add 16px for padding
         expandedContent.style.opacity = "1";
-        // expandedContent.style.paddingBottom = "16px";
+        expandedContent.style.paddingBottom = "16px";
       } else {
         expandedContent.style.maxHeight = "0px";
         expandedContent.style.opacity = "0";
