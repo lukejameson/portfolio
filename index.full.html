@@ -459,34 +459,43 @@
         const newTheme = body.classList.contains("dark-mode") ? "light" : "dark";
         setTheme(newTheme);
       });
+
       const moreButton = document.querySelector(".more-button");
       const gridContainer = document.getElementById("gridContainer");
       const moreButtonText = moreButton.querySelector(".more-button-text");
-      const ellipsis = document.querySelector(".ellipsis");
-      function toggleGrid() {
+      const ellipsis = moreButton.querySelector(".ellipsis");
+
+      function toggleGrid(e) {
+        e.preventDefault(); // Prevent default for both click and touch events
         gridContainer.classList.toggle("four-by-four");
         moreButtonText.textContent = gridContainer.classList.contains("four-by-four") ? "Less" : "More";
       }
-      moreButton.addEventListener("click", function (e) {
-        e.preventDefault();
-        toggleGrid();
-      });
+
       function animateEllipsis() {
         ellipsis.classList.add("hover");
       }
+
       function stopEllipsisAnimation() {
         ellipsis.classList.remove("hover");
       }
-      ellipsis.addEventListener("mouseenter", animateEllipsis);
-      ellipsis.addEventListener("mouseleave", stopEllipsisAnimation);
-      ellipsis.addEventListener("touchstart", function (e) {
-        e.preventDefault();
-        animateEllipsis();
-      });
-      ellipsis.addEventListener("touchend", function (e) {
-        e.preventDefault();
-        stopEllipsisAnimation();
-      });
+
+      // Use these event listeners for the entire more button
+      moreButton.addEventListener("click", toggleGrid);
+      moreButton.addEventListener("touchend", toggleGrid);
+
+      // Add hover effects for non-touch devices
+      if (!("ontouchstart" in window)) {
+        moreButton.addEventListener("mouseenter", animateEllipsis);
+        moreButton.addEventListener("mouseleave", stopEllipsisAnimation);
+      } else {
+        // For touch devices, animate on touchstart and stop on touchend
+        moreButton.addEventListener("touchstart", function (e) {
+          e.preventDefault(); // Prevent scrolling when touching the button
+          animateEllipsis();
+        });
+        moreButton.addEventListener("touchend", stopEllipsisAnimation);
+      }
+
       const experienceCards = document.querySelectorAll(".card-container");
       experienceCards.forEach((card) => {
         const expandedContent = card.querySelector(".expanded-content");
