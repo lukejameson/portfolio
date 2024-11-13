@@ -14,7 +14,7 @@ services:
       - 'traefik.http.routers.portfolio.rule=Host(`lukejameson.gg`)'
       - 'traefik.http.routers.portfolio.entrypoints=websecure'
       - 'traefik.http.routers.portfolio.tls.certresolver=letsencrypt'
-      - 'traefik.http.services.portfolio.loadbalancer.server.port=80'  # Changed: internal port is 80
+      - 'traefik.http.services.portfolio.loadbalancer.server.port=80'
       - 'traefik.http.middlewares.security-headers.headers.frameDeny=true'
       - 'traefik.http.middlewares.security-headers.headers.sslRedirect=true'
       - 'traefik.http.middlewares.security-headers.headers.browserXssFilter=true'
