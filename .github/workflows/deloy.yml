@@ -1,0 +1,46 @@
+name: Deploy Website
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up SSH
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.VPS_SSH_KEY }}
+
+      - name: Add SSH known hosts
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -H ${{ secrets.VPS }} >> ~/.ssh/known_hosts
+
+      # Upload source files (not minified)
+      - name: Transfer files
+        run: |
+          rsync -avz --exclude='.git*' \
+                     --exclude='node_modules' \
+                     ./ ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS }}:~/portfolio/
+
+      - name: Deploy with Docker
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS }}
+          username: ${{ secrets.VPS_USERNAME }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          passphrase: ${{ secrets.VPS_SSH_PASSPHRASE }}
+          port: ${{secrets.VPS_SSH_PORT}}
+          script: |
+            cd ~/docker-apps/portfolio
+            docker compose pull || true
+            docker compose down
+            docker compose up -d --build
+            docker system prune -f
