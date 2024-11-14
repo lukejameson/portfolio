@@ -8,9 +8,16 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="logo"
-      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📈</text></svg>" />
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📈</text></svg>"
+    />
     <title>Luke Jameson</title>
-		<script async defer src="https://analytics.lukejameson.gg/script.js"></script>
+    <script
+      async
+      defer
+      data-website-id="a9a4d628-d959-4f30-beed-16e091e6c004"
+      data-domains="lukejameson.gg"
+      src="https://analytics.lukejameson.gg/script.js"
+    ></script>
 
     <style>
       :root {
@@ -34,7 +41,8 @@
         background-color: var(--card-background);
       }
       body.dark-mode .logo {
-        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg)
+          brightness(100%) contrast(100%);
       }
       body.dark-mode .ball {
         background-color: var(--logo-color);
@@ -58,9 +66,11 @@
       .logo {
         width: 48px;
         height: 48px;
-        filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+        filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg)
+          brightness(100%) contrast(100%);
         transition: filter 0.3s;
-        -webkit-filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+        -webkit-filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg)
+          brightness(100%) contrast(100%);
       }
       .logo.sm {
         width: 32px;
@@ -97,11 +107,16 @@
       .card-container {
         cursor: pointer;
         overflow: hidden;
-        transition: max-height 0.6s ease-in-out, transform 0.5s, padding-bottom 0.6s ease-in-out;
-        -webkit-transition: max-height 0.6s ease-in-out, transform 0.5s, padding-bottom 0.6s ease-in-out;
-        -moz-transition: max-height 0.6s ease-in-out, transform 0.5s, padding-bottom 0.6s ease-in-out;
-        -ms-transition: max-height 0.6s ease-in-out, transform 0.5s, padding-bottom 0.6s ease-in-out;
-        -o-transition: max-height 0.6s ease-in-out, transform 0.5s, padding-bottom 0.6s ease-in-out;
+        transition: max-height 0.6s ease-in-out, transform 0.5s,
+          padding-bottom 0.6s ease-in-out;
+        -webkit-transition: max-height 0.6s ease-in-out, transform 0.5s,
+          padding-bottom 0.6s ease-in-out;
+        -moz-transition: max-height 0.6s ease-in-out, transform 0.5s,
+          padding-bottom 0.6s ease-in-out;
+        -ms-transition: max-height 0.6s ease-in-out, transform 0.5s,
+          padding-bottom 0.6s ease-in-out;
+        -o-transition: max-height 0.6s ease-in-out, transform 0.5s,
+          padding-bottom 0.6s ease-in-out;
       }
       .card-container:hover {
         transform: scale(1.01);
@@ -110,7 +125,8 @@
         max-height: 0;
         opacity: 0;
         overflow: hidden;
-        transition: max-height 0.6s ease-in-out, opacity 0.3s ease-in-out, padding 0.6s ease-in-out;
+        transition: max-height 0.6s ease-in-out, opacity 0.3s ease-in-out,
+          padding 0.6s ease-in-out;
         padding-bottom: 0;
       }
       .card-container.expanded .expanded-content {
@@ -195,7 +211,9 @@
     <main class="flex flex-col items-center justify-center min-h-screen py-2">
       <header class="flex flex-col items-center justify-center space-y-2">
         <h1 class="text-4xl font-bold">Luke Jameson</h1>
-        <h2 class="text-xl text-gray-500 dark:text-gray-400">Full Stack Developer</h2>
+        <h2 class="text-xl text-gray-500 dark:text-gray-400">
+          Full Stack Developer
+        </h2>
       </header>
 
       <section class="flex flex-col items-center justify-center space-y-4 mt-5">
@@ -336,25 +354,36 @@
         <h3 class="text-2xl font-bold">Experience &amp; Education</h3>
         <div class="flex flex-col space-y-2 w-full max-w-2xl">
           <div class="card-container">
-            <div class="card-header rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
+            <div
+              class="card-header rounded-lg border bg-card text-card-foreground shadow-sm"
+              data-v0-t="card"
+            >
               <div class="space-y-1.5 p-6 flex flex-row items-center gap-4">
                 <svg class="logo sm" width="32px" height="32px">
                   <use href="./logos.svg#briefcase"></use>
                 </svg>
                 <div class="grid gap-1">
-                  <div class="text-2xl font-semibold leading-none tracking-tight flex gap-3">
+                  <div
+                    class="text-2xl font-semibold leading-none tracking-tight flex gap-3"
+                  >
                     <span>Developer / Data Engineer</span>
                     <svg class="logo dropdown" width="16px" height="16px">
                       <use href="./logos.svg#caret-down"></use>
                     </svg>
                   </div>
-                  <p class="text-sm text-muted-foreground">GTL, 2020 - Present</p>
+                  <p class="text-sm text-muted-foreground">
+                    GTL, 2020 - Present
+                  </p>
                 </div>
               </div>
 
-              <div class="expanded-content flex flex-col gap-y-3 pt-1 pl-6 pr-6">
+              <div
+                class="expanded-content flex flex-col gap-y-3 pt-1 pl-6 pr-6"
+              >
                 <div class="flex flex-col gap-y-1">
-                  <h5 class="text-md font-semibold leading-none tracking-tight">Projects:</h5>
+                  <h5 class="text-md font-semibold leading-none tracking-tight">
+                    Projects:
+                  </h5>
                   <ul class="list-disc list-inside pl-2">
                     <li>Trading Platform Web Apps</li>
                     <li>Internal Tooling Web Apps</li>
@@ -363,7 +392,9 @@
                   </ul>
                 </div>
                 <div class="flex flex-col gap-y-1">
-                  <h5 class="text-md font-semibold leading-none tracking-tight">Tech Used:</h5>
+                  <h5 class="text-md font-semibold leading-none tracking-tight">
+                    Tech Used:
+                  </h5>
                   <ul class="list-disc list-inside pl-2">
                     <li>Angular, Typescript, CSS/SCSS</li>
                     <li>C#, ASP.NET, Redis, SQL</li>
@@ -378,38 +409,54 @@
             </div>
           </div>
 
-          <div class="rounded-lg border bg-card text-card-foreground shadow-sm experience-card" data-v0-t="card">
+          <div
+            class="rounded-lg border bg-card text-card-foreground shadow-sm experience-card"
+            data-v0-t="card"
+          >
             <div class="space-y-1.5 p-6 flex flex-row items-center gap-4">
               <svg class="logo sm" width="32px" height="32px">
                 <use href="./logos.svg#briefcase"></use>
               </svg>
               <div class="grid gap-1">
-                <h3 class="text-2xl font-semibold leading-none tracking-tight">Business Intelligence</h3>
+                <h3 class="text-2xl font-semibold leading-none tracking-tight">
+                  Business Intelligence
+                </h3>
                 <p class="text-sm text-muted-foreground">C5, 2017 - 2020</p>
               </div>
             </div>
           </div>
 
           <div class="card-container">
-            <div class="card-header rounded-lg border bg-card text-card-foreground shadow-sm" data-v0-t="card">
+            <div
+              class="card-header rounded-lg border bg-card text-card-foreground shadow-sm"
+              data-v0-t="card"
+            >
               <div class="space-y-1.5 p-6 flex flex-row items-center gap-4">
                 <svg class="logo sm" width="32px" height="32px">
                   <use href="./logos.svg#hat"></use>
                 </svg>
                 <div class="grid gap-1">
-                  <div class="text-2xl font-semibold leading-none tracking-tight flex gap-3">
+                  <div
+                    class="text-2xl font-semibold leading-none tracking-tight flex gap-3"
+                  >
                     <span>Exams / Qualifications</span>
                     <svg class="logo dropdown" width="16px" height="16px">
                       <use href="./logos.svg#caret-down"></use>
                     </svg>
                   </div>
-                  <p class="text-sm text-muted-foreground">Microsoft and Cisco</p>
+                  <p class="text-sm text-muted-foreground">
+                    Microsoft and Cisco
+                  </p>
                 </div>
               </div>
 
-              <div class="expanded-content flex flex-col gap-y-3 pt-1 pl-6 pr-6">
+              <div
+                class="expanded-content flex flex-col gap-y-3 pt-1 pl-6 pr-6"
+              >
                 <div class="flex flex-col gap-y-1">
-                  <h5 class="text-md font-semibold leading-none tracking-tight">Microsoft</h5>
+                  <h5 class="text-md font-semibold leading-none tracking-tight">
+                    Microsoft
+                  </h5>
                   <ul class="list-disc list-inside pl-2">
                     <li>MCSA: SQL 2016 Database Development</li>
                     <li>Querying Data with Transact-SQL</li>
@@ -420,7 +467,9 @@
                   </ul>
                 </div>
                 <div class="flex flex-col gap-y-1">
-                  <h5 class="text-md font-semibold leading-none tracking-tight">Cisco</h5>
+                  <h5 class="text-md font-semibold leading-none tracking-tight">
+                    Cisco
+                  </h5>
                   <ul class="list-disc list-inside pl-2">
                     <li>Networking+</li>
                   </ul>
@@ -429,14 +478,21 @@
             </div>
           </div>
 
-          <div class="rounded-lg border bg-card text-card-foreground shadow-sm experience-card" data-v0-t="card">
+          <div
+            class="rounded-lg border bg-card text-card-foreground shadow-sm experience-card"
+            data-v0-t="card"
+          >
             <div class="space-y-1.5 p-6 flex flex-row items-center gap-4">
               <svg class="logo sm" width="32px" height="32px">
                 <use href="./logos.svg#hat"></use>
               </svg>
               <div class="grid gap-1">
-                <h3 class="text-2xl font-semibold leading-none tracking-tight">Computing - L3 BTEC</h3>
-                <p class="text-sm text-muted-foreground">Highlands Collage, 2014 - 2017</p>
+                <h3 class="text-2xl font-semibold leading-none tracking-tight">
+                  Computing - L3 BTEC
+                </h3>
+                <p class="text-sm text-muted-foreground">
+                  Highlands Collage, 2014 - 2017
+                </p>
               </div>
             </div>
           </div>
@@ -452,12 +508,19 @@
       const storedTheme = localStorage.getItem("theme") || "light";
       function setTheme(theme) {
         body.classList.toggle("dark-mode", theme === "dark");
-        themeToggle.querySelector("use").setAttribute("href", theme === "light" ? "./logos.svg#moon" : "./logos.svg#sun");
+        themeToggle
+          .querySelector("use")
+          .setAttribute(
+            "href",
+            theme === "light" ? "./logos.svg#moon" : "./logos.svg#sun"
+          );
         localStorage.setItem("theme", theme);
       }
       setTheme(storedTheme);
       themeToggle.addEventListener("click", function () {
-        const newTheme = body.classList.contains("dark-mode") ? "light" : "dark";
+        const newTheme = body.classList.contains("dark-mode")
+          ? "light"
+          : "dark";
         setTheme(newTheme);
       });
 
@@ -469,7 +532,11 @@
       function toggleGrid(e) {
         e.preventDefault(); // Prevent default for both click and touch events
         gridContainer.classList.toggle("four-by-four");
-        moreButtonText.textContent = gridContainer.classList.contains("four-by-four") ? "Less" : "More";
+        moreButtonText.textContent = gridContainer.classList.contains(
+          "four-by-four"
+        )
+          ? "Less"
+          : "More";
       }
 
       function animateEllipsis() {
@@ -504,7 +571,8 @@
         function toggleCard() {
           card.classList.toggle("expanded");
           if (card.classList.contains("expanded")) {
-            expandedContent.style.maxHeight = expandedContent.scrollHeight + 16 + "px";
+            expandedContent.style.maxHeight =
+              expandedContent.scrollHeight + 16 + "px";
             expandedContent.style.opacity = "1";
             expandedContent.style.paddingBottom = "16px";
           } else {
