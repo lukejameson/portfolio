@@ -11,7 +11,7 @@ services:
     labels:
       - 'traefik.enable=true'
       - 'traefik.docker.network=web'
-      - 'traefik.http.routers.portfolio.rule=Host(`lukejameson.gg`)'
+      - 'traefik.http.routers.portfolio.rule=Host(`lukejameson.co.uk`)'
       - 'traefik.http.routers.portfolio.entrypoints=websecure'
       - 'traefik.http.routers.portfolio.tls.certresolver=letsencrypt'
       - 'traefik.http.services.portfolio.loadbalancer.server.port=80'
